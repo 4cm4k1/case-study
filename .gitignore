@@ -1,0 +1,9 @@
+# Yarn
+node_modules/
+*.log
+
+# Next.js
+.next/
+
+# Local dev SSL certs
+*.pem
