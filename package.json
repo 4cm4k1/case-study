@@ -53,14 +53,6 @@
     "env": {
       "NODE_ENV": "production"
     },
-    "files": [
-      "components",
-      "pages",
-      "static",
-      "next.config.js",
-      "server.js",
-      "yarn.lock"
-    ],
     "name": "case-study",
     "public": true,
     "type": "npm"
