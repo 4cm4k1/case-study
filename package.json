@@ -54,8 +54,12 @@
       "NODE_ENV": "production"
     },
     "files": [
-      ".next/",
-      "server.js"
+      "components",
+      "pages",
+      "static",
+      "next.config.js",
+      "server.js",
+      "yarn.lock"
     ],
     "name": "case-study",
     "public": true,
