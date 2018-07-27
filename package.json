@@ -57,7 +57,7 @@
       ".next/",
       "server.js"
     ],
-    "name": "anthony-codes",
+    "name": "case-study",
     "public": true,
     "type": "npm"
   },
