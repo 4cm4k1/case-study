@@ -3,7 +3,8 @@ const polka = require("polka");
 const next = require("next");
 const { parse } = require("url");
 const { join } = require("path");
-const { createServer } = require("https");
+const { createServer } = require("http");
+// const { createServer } = require("https"); Enable this later
 const { readFileSync } = require("fs");
 
 const { PORT = 4242, NODE_ENV } = process.env;
@@ -80,6 +81,6 @@ app.prepare().then(() => {
 
   // Start server
   createServer(options, handler).listen(PORT, _ =>
-    console.log(`> Ready on https://localhost:${PORT}`)
+    console.log(`> Ready on http://localhost:${PORT}`)
   );
 });
