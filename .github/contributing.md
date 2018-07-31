@@ -1,7 +1,6 @@
 ---
 name: Contributing
 about: Contribute to this project!
-
 ---
 
 # Contributing to case-study

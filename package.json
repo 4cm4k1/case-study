@@ -1,6 +1,6 @@
 {
   "name": "case-study",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": true,
   "description": "Case study for job application",
   "bugs": "https://github.com/4cm4k1/case-study/issues",
@@ -16,33 +16,48 @@
     "dev": "NODE_ENV=dev node server.js",
     "precommit": "pretty-quick --staged",
     "start": "NODE_ENV=production node server.js",
-    "prettier": "prettier '{*,{lib,test,web}/**/*}.{css,js,json,md,scss}' --write",
-    "prettier:watch": "onchange '{*,{lib,test,web}/**/*}.{css,js,json,md,scss}' -- prettier --write {{changed}}",
+    "prettier": "prettier '{*,{.github,components,pages,static}/**/*}.{css,js,json,jsx,md,scss,yaml,yml}' --write",
+    "prettier:watch": "onchange '{*,{.github,components,pages,static}/**/*}.{css,js,json,jsx,md,scss,yaml,yml}' -- prettier --write {{changed}}",
     "watch": "npm-run-all prettier-watch dev"
   },
   "dependencies": {
-    "@mdx-js/mdx": "^0.15.0-0",
-    "@zeit/next-bundle-analyzer": "^0.1.1",
-    "@zeit/next-mdx": "^1.1.0",
-    "@zeit/next-source-maps": "^0.0.2",
-    "next": "^6.1.1-canary.2",
+    "@material/layout-grid": "^0.34.0",
+    "@material/react-button": "^0.4.0",
+    "@material/react-card": "^0.4.0",
+    "@material/react-fab": "^0.4.0",
+    "@material/react-floating-label": "^0.4.0",
+    "@material/react-line-ripple": "^0.4.0",
+    "@material/react-material-icon": "^0.4.0",
+    "@material/react-notched-outline": "^0.4.0",
+    "@material/react-ripple": "^0.4.0",
+    "@material/react-text-field": "^0.4.0",
+    "@material/react-top-app-bar": "^0.4.0",
+    "@zeit/next-bundle-analyzer": "^0.1.2-canary.4",
+    "@zeit/next-css": "^0.2.1-canary.1",
+    "@zeit/next-source-maps": "^0.0.3-canary.1",
+    "helmet": "^3.13.0",
+    "isomorphic-unfetch": "^2.1.1",
+    "modern-normalize": "^0.5.0",
+    "next": "^6.1.1-canary.3",
     "next-compose-plugins": "^2.1.1",
     "next-offline": "^2.8.0",
     "next-optimized-images": "^1.4.1",
     "polka": "^0.4.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
-    "shrink-ray-current": "^2.1.2"
+    "shrink-ray-current": "^2.1.2",
+    "uuid": "^3.3.2"
   },
   "devDependencies": {
-    "@types/next": "^6.1.0",
+    "@types/material-components-web": "^0.35.0",
+    "@types/next": "^6.1.1",
     "@types/react": "^16.4.7",
     "@types/react-dom": "^16.0.6",
     "debug": "^3.1.0",
     "husky": "^0.14.3",
     "npm-run-all": "^4.1.3",
     "onchange": "^4.1.0",
-    "prettier": "^1.13.7",
+    "prettier": "^1.14.0",
     "pretty-quick": "^1.6.0"
   },
   "now": {
@@ -68,5 +83,17 @@
     "labels": [
       "renovate"
     ]
+  },
+  "prettier": {
+    "arrowParens": "avoid",
+    "bracketSpacing": true,
+    "jsxBracketSameLine": false,
+    "printWidth": 80,
+    "proseWrap": "preserve",
+    "semi": true,
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "all",
+    "useTabs": false
   }
 }
