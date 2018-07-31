@@ -8,17 +8,20 @@ import '@material/react-material-icon/dist/material-icon.css';
 export default class AppBar extends React.Component {
   render() {
     return (
-      <TopAppBar
-        className="mdc-top-app-bar--fixed"
-        title="myRetail"
-        actionItems={[
-          <MaterialIcon
-            key="item"
-            icon="shopping_cart"
-            onClick={() => console.log('click')}
-          />,
-        ]}
-      />
+      // TODO: Make this red
+      <div>
+        <TopAppBar
+          className="mdc-top-app-bar--fixed target-red"
+          title="myRetail"
+          actionItems={[
+            <MaterialIcon
+              key="item"
+              icon="shopping_cart"
+              onClick={() => console.log('click')}
+            />,
+          ]}
+        />
+      </div>
     );
   }
 }

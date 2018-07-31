@@ -1,5 +1,8 @@
 import React from 'react';
 
-export default class AppBar extends React.Component {
+import ItemTopPro from '../components/itemTopPro';
+import ItemTopCon from '../components/itemTopCon';
+
+export default class ItemReviews extends React.Component {
   render() {}
 }

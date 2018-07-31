@@ -53,7 +53,8 @@ function getDirectives() {
   const scripts = ['https:'];
   const styles = ['https:', 'fonts.googleapis.com'];
   const fonts = ['https:', 'fonts.gstatic.com'];
-  const images = ['https:', 'data:'];
+  const images = ['https:', 'data:', 'target.scene7.com'];
+  const connect = ['https:', 'target.scene7.com'];
 
   return {
     defaultSrc: [none],
@@ -65,17 +66,12 @@ function getDirectives() {
       ...scripts,
       // /* if dev */ unsafeEval,
     ],
-    styleSrc: [
-      self,
-      getNonce,
-      // unsafeInline,
-      ...styles,
-    ],
+    styleSrc: [self, unsafeInline, ...styles],
     fontSrc: [self, ...fonts],
     imgSrc: [self, ...images],
     baseUri: [none],
     objectSrc: [none],
-    connectSrc: dev ? [self] : [none],
+    connectSrc: dev ? [self, ...connect] : [...connect],
     upgradeInsecureRequests: dev ? false : true,
   };
 }

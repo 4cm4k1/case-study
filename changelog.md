@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.0.3
+
+- Add `ItemButton`, `ItemCallouts`, `ItemImage`, `ItemPrice`, `ItemPurchase`, `ItemQuantity`, and `ItemTitle`
+- Tweak CSP
+- Add custom styling
+- Use `react-ideal-image`
+- Use `next-compose-plugins`
+
 ## 0.0.2
 
 - Begin implementation of Material Web Components

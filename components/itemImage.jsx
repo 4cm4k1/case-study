@@ -1,5 +1,5 @@
 import React from 'react';
 
-export default class AppBar extends React.Component {
+export default class ItemImage extends React.Component {
   render() {}
 }
