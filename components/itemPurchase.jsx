@@ -7,33 +7,36 @@ export default class ItemPurchase extends React.Component {
   render() {
     const { inStore, online } = this.props;
 
-    console.log(inStore, online);
-
     return (
       <div className="host">
-        <span> </span>
+        <ItemQuantity />
         <div className="buttons">
-          <ItemQuantity />
           <ItemButton
             isActive={inStore}
             title="Pick Up In Store"
             action={() => console.log('hi')}
             colorClass={''}
+            icon="store"
           />
           <ItemButton
             isActive={online}
             title="Add to Cart"
             action={() => console.log('hi')}
             colorClass={''}
+            icon="add_shopping_cart"
           />
         </div>
         <style jsx>{`
+          .host {
+            // display: flex;
+            // flex-flow: column wrap;
+            // align-content: center;
+          }
           .buttons {
             display: flex;
             flex-flow: row wrap;
             vertical-align: middle;
-            align-items: center;
-            // justify-content: space-evenly;
+            justify-content: space-evenly;
           }
         `}</style>
       </div>

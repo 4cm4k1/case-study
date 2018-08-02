@@ -12,7 +12,7 @@ export default class ItemImages extends React.Component {
       <div>
         <IdealImage
           placeholder={{ color: 'blue' }}
-          srcSet={[{ src: this.props.primaryImage, width: 400 }]}
+          srcSet={[{ src: this.props.images[0], width: 400 }]}
           alt="Ninja"
           width={400}
           height={400}

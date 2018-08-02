@@ -7,27 +7,44 @@ import '@material/react-material-icon/dist/material-icon.css';
 import '@material/react-fab/dist/fab.css';
 
 export default class ItemQuantity extends React.Component {
-  // TODO: Put state things here
+  constructor(props) {
+    super(props);
+    this.state = { quantity: 1 };
+    this.increment = this.increment.bind(this);
+    this.decrement = this.decrement.bind(this);
+  }
 
-  // TODO: Put setState methods here
+  increment() {
+    this.setState(prevState => ({
+      quantity: prevState.quantity + 1,
+    }));
+  }
+
+  decrement() {
+    this.setState(prevState => ({
+      quantity: prevState.quantity === 0 ? 0 : prevState.quantity - 1,
+    }));
+  }
 
   render() {
+    const { quantity } = this.state;
     return (
       <div className="host">
-        <span>Quantity:</span>
-        <Fab mini icon={<MaterialIcon icon="remove" />} />
-        <strong>1</strong>
-        <Fab mini icon={<MaterialIcon icon="add" />} />
+        <strong>Quantity:</strong>
+        <Fab
+          mini
+          onClick={this.decrement}
+          icon={<MaterialIcon icon="remove" />}
+        />
+        <strong>{quantity}</strong>
+        <Fab mini onClick={this.increment} icon={<MaterialIcon icon="add" />} />
         <style jsx>{`
           .host {
-            padding: 0.8rem 0.8rem 0.8rem 0;
-            display: inline-block;
-          }
-          span,
-          strong {
-            font-size: 1rem;
-            padding: 0 0.5rem;
-            vertical-align: super;
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+            justify-content: space-evenly;
+            padding: 1rem 0;
           }
         `}</style>
       </div>

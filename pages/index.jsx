@@ -1,6 +1,4 @@
 import React from 'react';
-import fetch from 'isomorphic-unfetch';
-import getConfig from 'next/config';
 
 import '@material/layout-grid/dist/mdc.layout-grid.css';
 
@@ -14,8 +12,6 @@ import ItemDisclosure from '../components/itemDisclosure';
 import ItemActions from '../components/itemActions'; // ItemButton
 import ItemReviews from '../components/itemReviews'; // ItemTopPro and ItemTopCon
 import ItemHighlights from '../components/itemHighlights';
-
-const { publicRuntimeConfig } = getConfig();
 
 export default class Index extends React.Component {
   static async getInitialProps() {

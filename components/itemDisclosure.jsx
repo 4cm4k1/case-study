@@ -16,8 +16,10 @@ export default class ItemDisclosure extends React.Component {
 
     return (
       <Card>
-        <h1>{title}</h1>
-        <p>{description}</p>
+        <CardPrimaryContent>
+          <h1>{title}</h1>
+          <p>{description}</p>
+        </CardPrimaryContent>
       </Card>
     );
   }

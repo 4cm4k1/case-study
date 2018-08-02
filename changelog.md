@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.0.5
+
+- Refactor `ItemButton` and `ItemQuantity`
+- Add icons to `ItemButton` and change style to outlined
+- Run `prettier`
+
 ## 0.0.4
 
 - Refactor getting data into its own class `ItemData`

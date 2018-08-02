@@ -1,16 +1,23 @@
 import React from 'react';
 
 import Button from '@material/react-button';
+import MaterialIcon from '@material/react-material-icon';
 
 import '@material/react-button/dist/button.css';
+import '@material/react-material-icon/dist/material-icon.css';
 
-export default class ItemPickupButton extends React.Component {
+export default class ItemButton extends React.Component {
   render() {
-    const { isActive, title, action, colorClass } = this.props;
+    const { isActive, title, action, color, icon } = this.props;
 
     return (
       <div>
-        <Button raised disabled={!isActive} onClick={action}>
+        <Button
+          outlined
+          disabled={!isActive}
+          onClick={action}
+          icon={<MaterialIcon icon={icon} />}
+        >
           {title}
         </Button>
       </div>
