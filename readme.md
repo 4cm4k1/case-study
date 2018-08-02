@@ -33,7 +33,12 @@ git clone https://github.com/4cm4k1/case-study.git && cd case-study && npm i
 
 ## Usage
 
-The following are available `npm` scripts contained within `package.json`. Each may be run on the command line like so: `yarn [script]` or `npm run [script]`.
+The following are available `npm` scripts contained within `package.json`.
+
+Each may be run on the command line like so:
+
+- `yarn [script]` or
+- `npm run [script]`
 
 ### `analyze[:(browser|server)]`
 
