@@ -27,6 +27,8 @@ export default class Index extends React.Component {
       promos,
       availability,
       disclosure,
+      highlights,
+      reviews,
     } = this.props;
     console.log(title, images, price, promos, availability);
 
@@ -37,6 +39,12 @@ export default class Index extends React.Component {
             <div className="mdc-layout-grid__cell--span-6-desktop mdc-layout-grid__cell--span-4-phone">
               <ItemTitle title={title} />
               <ItemImages images={images} />
+              <ItemReviews
+                averageReview={reviews.averageReview}
+                totalReviews={reviews.totalReviews}
+                topPro={reviews.topProReview}
+                topCon={reviews.topConReview}
+              />
             </div>
             <div className="mdc-layout-grid__cell--span-6-desktop mdc-layout-grid__cell--span-4-phone">
               <ItemPrice price={price} />
@@ -49,7 +57,11 @@ export default class Index extends React.Component {
                 title={disclosure.title}
                 description={disclosure.description}
               />
-              {/* <ItemActions /> */}
+              <ItemActions />
+              <ItemHighlights
+                description={highlights.description}
+                features={highlights.features}
+              />
             </div>
           </div>
         </div>

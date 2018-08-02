@@ -15,14 +15,12 @@ export default class ItemPurchase extends React.Component {
             isActive={inStore}
             title="Pick Up In Store"
             action={() => console.log('hi')}
-            colorClass={''}
             icon="store"
           />
           <ItemButton
             isActive={online}
             title="Add to Cart"
             action={() => console.log('hi')}
-            colorClass={''}
             icon="add_shopping_cart"
           />
         </div>

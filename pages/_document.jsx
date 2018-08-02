@@ -12,7 +12,14 @@ export default class MyDocument extends Document {
     return (
       <html lang="en-US">
         <Head nonce={nonce}>
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" />
+          <link rel="preconnect" href="https://target.scene7.com" />
           <title>myRetail</title>
+          <meta
+            name="description"
+            content="myRetail is a leading online retailer."
+          />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <link
             href="https://fonts.googleapis.com/icon?family=Material+Icons"

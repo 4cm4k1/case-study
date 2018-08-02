@@ -35,6 +35,32 @@ export default class ItemData {
           ' ',
         ),
       },
+      highlights: {
+        description: data.shortDescription,
+        features: [...data.ItemDescription[0].features],
+      },
+      reviews: {
+        averageReview: data.CustomerReview[0].consolidatedOverallRating,
+        totalReviews: data.CustomerReview[0].totalReviews,
+        topProReview: {
+          title: data.CustomerReview[0].Pro[0].title,
+          name: data.CustomerReview[0].Pro[0].screenName,
+          description: data.CustomerReview[0].Pro[0].review,
+          averageReview: data.CustomerReview[0].Pro[0].overallRating,
+          date: new Date(
+            data.CustomerReview[0].Pro[0].datePosted,
+          ).toLocaleString('en-US'),
+        },
+        topConReview: {
+          title: data.CustomerReview[0].Con[0].title,
+          name: data.CustomerReview[0].Con[0].screenName,
+          description: data.CustomerReview[0].Con[0].review,
+          averageReview: data.CustomerReview[0].Con[0].overallRating,
+          date: new Date(
+            data.CustomerReview[0].Con[0].datePosted,
+          ).toLocaleString('en-US'),
+        },
+      },
     };
     return item;
   }
