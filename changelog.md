@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.0.6
+
+- Use MDC Layout Grid for `ItemDisclosure`
+- Implement `@zeit/next-source-maps`
+- Implement `@zeit/next-bundle-analyzer`
+- Implement `next-offline` for PWA and service worker capabilities
+
 ## 0.0.5
 
 - Refactor `ItemButton` and `ItemQuantity`

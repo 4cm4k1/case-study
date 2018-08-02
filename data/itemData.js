@@ -8,6 +8,7 @@ export default class ItemData {
     const data = await fetch(`${publicRuntimeConfig.hostname}/data.json`)
       .then(response => response.json())
       .then(data => data.CatalogEntryView[0]);
+    console.log(data);
     const item = {
       title: data.title,
       images: [
@@ -29,7 +30,10 @@ export default class ItemData {
       },
       disclosure: {
         title: 'Returns',
-        description: data.ReturnPolicy[0].legalCopy,
+        description: data.ReturnPolicy[0].legalCopy.replace(
+          /(<([^>]+)>)|(&nbsp;)/gi,
+          ' ',
+        ),
       },
     };
     return item;

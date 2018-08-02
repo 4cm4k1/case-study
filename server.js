@@ -122,8 +122,11 @@ app.prepare().then(() => {
       const { path, query } = parsedUrl;
 
       if (rootStaticFiles.includes(path)) {
-        // Handle requests for files in /static/ with Next.js magic
+        // Serve static files
         app.serveStatic(req, res, join(__dirname, 'static', path));
+      } else if (path === '/service-worker.js') {
+        // Serve service worker
+        app.serveStatic(req, res, join(__dirname, '.next', path));
       } else {
         // Handle everything else with Polka
         handle(req, res);
