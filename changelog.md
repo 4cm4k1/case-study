@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.0.4
+
+- Refactor getting data into its own class `ItemData`
+- Use object destructuring to make code more semantic
+- Bump several dependencies
+- Refactor `ItemCallouts` to `ItemPromos`
+- Refactor `ItemDisclosures` to `ItemDisclosure`
+
 ## 0.0.3
 
 - Add `ItemButton`, `ItemCallouts`, `ItemImage`, `ItemPrice`, `ItemPurchase`, `ItemQuantity`, and `ItemTitle`

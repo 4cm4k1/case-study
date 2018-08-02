@@ -5,40 +5,35 @@ import ItemButton from '../components/itemButton';
 
 export default class ItemPurchase extends React.Component {
   render() {
-    const { availability } = this.props;
+    const { inStore, online } = this.props;
 
-    const pickupStatus = availability === 0 || 2 ? true : false;
-    const cartStatus = availability === 0 || 1 ? true : false;
+    console.log(inStore, online);
 
     return (
       <div className="host">
-        <ItemQuantity />
         <span> </span>
         <div className="buttons">
+          <ItemQuantity />
           <ItemButton
-            isActive={pickupStatus}
+            isActive={inStore}
             title="Pick Up In Store"
             action={() => console.log('hi')}
             colorClass={''}
           />
           <ItemButton
-            isActive={cartStatus}
+            isActive={online}
             title="Add to Cart"
             action={() => console.log('hi')}
             colorClass={''}
           />
         </div>
         <style jsx>{`
-          .host {
-            display: flex;
-            flex-flow: column nowrap;
-          }
-
           .buttons {
             display: flex;
             flex-flow: row wrap;
-            align-content: stretch;
-            justify-content: space-evenly;
+            vertical-align: middle;
+            align-items: center;
+            // justify-content: space-evenly;
           }
         `}</style>
       </div>

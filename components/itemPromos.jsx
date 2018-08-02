@@ -4,16 +4,15 @@ import MaterialIcon from '@material/react-material-icon';
 
 import '@material/react-material-icon/dist/material-icon.css';
 
-export default class ItemCallouts extends React.Component {
+export default class ItemPromos extends React.Component {
   render() {
-    const { callouts } = this.props;
+    const { promos } = this.props;
 
     return (
       <div className="host">
-        {callouts.map(({ promotionIdentifier, Description }) => (
-          <div key={promotionIdentifier} className="callouts">
-            <MaterialIcon icon="local_offer" />{' '}
-            <span>{Description[0].shortDescription}</span>
+        {promos.map(({ promoId, description }) => (
+          <div key={promoId} className="promos">
+            <MaterialIcon icon="local_offer" /> <span>{description}</span>
           </div>
         ))}
         <style jsx>{`
@@ -27,7 +26,7 @@ export default class ItemCallouts extends React.Component {
             vertical-align: super;
           }
 
-          .callouts {
+          .promos {
             color: rgb(204, 0, 0);
           }
         `}</style>

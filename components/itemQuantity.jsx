@@ -20,12 +20,12 @@ export default class ItemQuantity extends React.Component {
         <Fab mini icon={<MaterialIcon icon="add" />} />
         <style jsx>{`
           .host {
-            padding: 1rem;
+            padding: 0.8rem 0.8rem 0.8rem 0;
             display: inline-block;
           }
           span,
           strong {
-            font-size: 1.2rem;
+            font-size: 1rem;
             padding: 0 0.5rem;
             vertical-align: super;
           }
